@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* CSS dapendik */
+/* heading */
+.page-title{
+	border-bottom:#ddd solid 1px;
+}
+.page-title h2{
+	color:#007C72;
+	font-size:24px;
+}
+.page-title >div{
+	height:80px;
+}
+/* icon jenjang */
+.icj{
+	display:block;
+	opacity:0.75;
+}
+.icj>*{
+	white-space:nowrap;
+	display:block;
+	color:#888;
+}
+.icj:before{
+	content:'';
+	background:url(../img/ic/ic50-jenjang.png) no-repeat 0 0;
+	display:inline-block;
+	width:50px;
+	height:50px;
+}
+.icj-sd:before{
+	background-position:-50px 0;
+}
+.icj-smp:before{
+	background-position:-100px 0;
+}
+.icj-sma:before{
+	background-position:-150px 0;
+}
+.icj-smk:before{
+	background-position:-200px 0;
+}
+/* menu jenjang */
+.menu-jenjang >a{
+	float:left;
+	position:relative;
+	min-width:80px;
+	min-height:65px !important;
+	padding:0 0 15px;
+	margin:0 10px;
+	text-decoration:none !important;
+}
+.menu-jenjang .icj.on,
+.menu-jenjang .icj:hover{
+	opacity:1;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#1a000000',GradientType=0 );
+}
+.menu-jenjang >a.on:after{
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-1px;
+	height:8px;
+	width:100%;
+	z-index:1;
+	background:url(../img/skin/skn-point-ff.png) no-repeat center top;
+}
+.menu-jenjang .icj{
+	text-align:center;
+}
+/* menu beranda */
+.menu-beranda >.fl{
+	width:19%;
+}
+.menu-beranda >.fl+.fl{
+	margin-left:1.25%;
+}
+.menu-beranda .icj{
+	height:60px;
+}
+.menu-beranda .freearea{
+	border-bottom:#ddd solid 1px !important;
+}

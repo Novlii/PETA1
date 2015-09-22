@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* CSS warning @ after global header */
+.head-global+.warn-frm{
+	position:relative;
+}
+.warn-frm >.warn-cont{
+	position:absolute;
+	height:0;
+	width:100%;
+	z-index:1000;
+}
+.warn-frm .warn{
+	margin:10px auto;
+	max-width:50%;
+}
+/* default */
+.warn{
+	background-color:#FFFBCC;
+	border:#ffcb66 1px solid;
+	border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -khtml-border-radius:3px;
+	margin-bottom:10px;
+	cursor:default;
+	display:table;
+	position:relative;
+}
+.warn >*{
+	display:table-cell;
+	padding:7px 10px;
+	height:16px;
+}
+.warn >*[alt]:first-child:before{
+	content:attr(alt)" ";
+	color: #f00;
+	font-weight:bold;
+}
+.warn:before{
+	content:url(../img/skin/blank.png);
+	background:#ffeac1 url(../img/ic/ic16-warn.png) no-repeat center 7px;
+	width:30px;
+	display:table-cell;
+	border-bottom-left-radius:3px; border-top-left-radius:3px; 
+	-moz-border-radius-bottomleft:3px; -moz-border-radius-topleft:3px; 
+	-webkit-border-radius-bottomleft:3px; -webkit-border-radius-topleft:3px; 
+	-khtml-border-radius-bottomleft:3px; -khtml-border-radius-topleft:3px;
+}
+.warn:after{
+	content:url(../img/skin/blank.png);
+	width:3px;
+	display:table-cell;
+	border-bottom-right-radius:3px; border-top-right-radius:3px; 
+	-moz-border-radius-bottomright:3px; -moz-border-radius-topright:3px; 
+	-webkit-border-radius-bottomright:3px; -webkit-border-radius-topright:3px; 
+	-khtml-border-radius-bottomright:3px; -khtml-border-radius-topright:3px;
+}
+.warn[alt~=x]{
+	cursor:pointer;
+}
+.warn[alt~=x]:after{
+	width:14px;
+}
+.warn[alt~=x]:hover:after{
+	background:url(../img/ic/ic7-cross.png) no-repeat 0 7px;
+}
+/* success */
+.warn[alt~=ok]{
+	border-color:#9fe004;
+	background-color: #f4ffd9;
+}
+.warn[alt~=ok] >*:first-child:before{
+	color:#3b9e00;
+}
+.warn[alt~=ok]:before{
+	background-image: url(../img/ic/ic16-ok.png);
+	background-color: #dbfa90;
+}
+/* info */
+.warn[alt~=nfo]{
+	border-color:#71bbff;
+	background-color: #e1f1ff;
+}
+.warn[alt~=load] >*:first-child:before,
+.warn[alt~=nfo] >*:first-child:before{
+	color:#167ede;
+}
+.warn[alt~=nfo]:before{
+	background-image: url(../img/ic/ic16-info.png);
+	background-color: #cfe5f9;
+}
+/* error */
+.warn[alt~=err]{
+	border-color:#ec9e9e;
+	background-color: #ffeded;
+}
+.warn[alt~=err] >*:first-child:before{
+	color:#900;
+}
+.warn[alt~=err]:before{
+	background-image: url(../img/ic/ic16-error.png);
+	background-color: #fcd2d2;
+}
+/* load */
+.warn[alt~=load]{
+	border-color:#dadada;
+	background-color: #fff;
+	color:#777;
+}
+.warn[alt~=load]:before{
+	background-image: url(../img/ic/ic16-loading.gif);
+	background-color: #f3f3f3;
+	background-position:center 9px;
+}
+/* notes */
+.warn[alt~=note]{
+	color:#666;
+	background-color:#fffde6;
+}
+.warn[alt~=note] >*:first-child:before{
+	color:#FF8400;
+}
+.warn[alt~=note]:before{
+	background-image: url(../img/ic/ic16-note_pin.png);
+}
+/* text format */
+.warn li{
+	margin:2px 7px !important;
+}
+.warn >* >li{
+	margin-left:15px !important;
+}

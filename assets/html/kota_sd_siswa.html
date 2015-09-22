@@ -1,0 +1,322 @@
+<div id="js-pagediv-index">
+   <div class="workspc">
+      <div class="workspc-l" style="background: #f3f3f3; padding-top: 0;">
+         <div class="box-cont ar">
+            <h3 class="desc half fl al">Perubahan data bersifat Real Time Online oleh para Admin Sekolah</h3>
+            <h1 class="desc half fr ar">Pemetaan Mutu Pendidikan Indonesia</h1>
+         </div>
+         <iframe width="1000" height="450" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col44+from+1AcUmiL9Mu8klMB0QWN8bFvcHr-fuperN1z2FNjX3&amp;viz=MAP&amp;h=false&amp;lat=-7.982706845900374&amp;lng=112.64987495733452&amp;t=1&amp;z=13&amp;l=col44&amp;y=3&amp;tmplt=5&amp;hml=TWO_COL_LAT_LNG"></iframe>
+		<div class="page-crumb js-crumb" id="c-data"><a class="ic lbl">Peta Pendidikan</a><a class="ic ic-p-r lbl" href="/PETA">Jawa Timur</a><a class="ic ic-p-r lbl" href="/PETA/#!/kota">Kota Malang</a><span class="ic ic-p-r lbl">SD/MI</span></div>
+		 
+         <div class="box-cont">
+            <table class="page-title full">
+ <tbody><tr>
+                     <td class="med-card menu-jenjang">
+                        <a href="javascript:" class="namecard">
+                           <img src="http://s.sim.siap-online.com/upload/dinas/205031.png">
+                           <h2>Kota Malang</h2>
+                           <em class="desc">Dinas Pendidikan</em>
+                        </a>
+                     </td>
+                                          <td class="vt">
+                        <form class="fr">
+                           <div style="margin:0 10px" onclick="window.location='http://malang.siap-ppdb.com'" class="button">
+                              <b class="med">&nbsp;<br>Portal PPDB<br>&nbsp;</b>
+                           </div>
+                           <!--                           <div class="button js-aktivasi-btn" style="margin:0 10px">-->
+                           <!--                              <b class="med">&nbsp;<br>Aktifkan Sekolah Anda<br>&nbsp;</b>-->
+                           <!--                           </div>-->
+                        </form>
+                     </td>
+                                            <td class="fr menu-jenjang js-menu-btn" style="">                                                     
+                                                     <a class="icj icj-tk" href="#!/kota_tk"><b>TK/PAUD</b></a>
+                                                   <a class="icj icj-sd on" href="#!/kota_sd"><b>SD/MI</b></a>
+                                                   <a class="icj icj-smp" href="#!/kota_smp"><b>SMP/MTs</b></a>
+                                                   <a class="icj icj-sma " href="#!/kota_sma"><b>SMA/MA</b></a>
+                                                   <a class="icj icj-smk" href="#!/kota_smk"><b>SMK/MAK</b></a>
+                                             </td>
+                  </tr>
+               </tbody>
+			</table>
+            <!-- rekap -->
+<div style="background: rgb(255, 255, 255);" class="js-pagediv" id="js-pagediv-detil">
+                  <div class="freearea clear">
+                     <form class="fr">
+                        <div class="nav" style="height: 17px;">
+                           <a title="cetak halaman" class="print tips-r hide"></a>
+                        </div>
+					</form>
+                  </div>
+                  <div class="app-menu2 app-head-menu clear js-app-menu"><ul><li><a href="#!/kota_sd" rel="sekolah">Data Sekolah</a></li><li  class="on"><a href="#!/kota_sd_siswa" rel="siswa">Data Siswa</a></li><li><a href="#!/kota_sd_guru" rel="guru">Data Guru</a></li><li><a href="#!/kota_sd_sarpras" rel="sarpras">Data Sarpras</a></li></ul></div>
+                  <div class="box-cont" style="padding: 10px 12px 0px 12px">
+                     <div class="nav-cont rnd3 clear" style="margin-bottom:0px">
+                        <div class="nav">
+                           <span><b class="med js-total" id="total"></b> Sekolah</span>
+                        </div>
+                     <form class="nav fr" name="form" onClick="quickSelect()">
+							
+							<select NAME="sts" SIZE=1 style="width:67px">
+								<option VALUE="negeri">Negeri</option>
+								<option VALUE="swasta" > Swasta</option>
+							</SELECT>  
+							<select NAME="jenis" SIZE=1 style="width:147px">
+								<option VALUE="naungan">Seluruh Naungan</option>
+								<option VALUE="dinas">Naungan Kemdikbud</option>
+								<option VALUE="depag">Naungan Kemenag</option>
+							</SELECT>							
+						   <a title="memuat ulang" class="reload tips js-reload" href="javascript:"></a>
+						   
+                        </form>
+						
+						<form class="nav fr" name="formsearch">
+							<input type="text" name="fname" placeholder="search..." class="js-search-keyword">
+							<a class="cari js-search-btn"  href="javascript:myFunction()"></a>
+                        </form>
+                     </div>
+                     <div style="display: none;" class="js-search-info">
+                        <div class="freearea clear">
+                           <div style="width: 80% !important;" class="ic ic-cari lbl nav">
+                              <span>Hasil pencarian kata</span>
+                              <span class="trio2"><b class="med ellipsis js-search-label"></b></span>
+                           </div>
+                           <a href="javascript:" class="ic act-cls fr js-search-close"></a>
+                        </div>
+                        <div style="width: 200px;" class="pointed-t section"></div>
+                     </div>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-sekolah">
+                     <!-- data kelulusan kota -->
+                     <table class="tbl-data full js-rekap-sekolah">
+                        <caption>Data Siswa <span class="sml">jenjang</span> <span class="js-jenjang">SD/MI</span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="10" rowspan="2">No</th>
+                              <th rowspan="2">Sekolah</th>
+                              <th rowspan="2">Status</th>
+                              <th class="ac" colspan="2">Jumlah Siswa</th>
+                           </tr>
+						   <tr class="ar">
+                              <th><i class="ics ic-male tips" title="Laki-laki"></i></th>
+                              <th><i class="ics ic-female tips" title="Perempuan"></i></th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar" id="demo">
+                            <script>
+
+var n1 = '{"data": [{"jml_guru":30,"jml_kompetensi":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533946.150421112208.png","alamat":"Jl. Kemantren II No.26","nama":"MIN MALANG 2","sekolah_id":20533946,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":0,"total_siswa_l":0,"is_negeri":"TRUE"},{"jml_guru":0,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Malenggang 12-14 Malang","nama":"SD BINA1 BANGSA CHRISTIAN SCHOOL","sekolah_id":20570230,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":0,"total_siswa_l":0,"is_negeri":"TRUE"},{"jml_guru":27,"jml_kompetensi":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20534070.150309112026.png","alamat":"Jl. Teluk Pelabuhan Ratu 05","nama":"SD N ARJOSARI 01 KOTA MALANG","sekolah_id":20534070,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":254,"total_siswa_l":228,"is_negeri":"TRUE"},{"jml_guru":14,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Teluk Pelabuhan Ratu 40","nama":"SD N ARJOSARI 02 KOTA MALANG","sekolah_id":20534071,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":21,"total_siswa_l":16,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Teluk Perigi 1","nama":"SD N ARJOSARI 03 KOTA MALANG","sekolah_id":20534072,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":16,"total_siswa_l":16,"is_negeri":"TRUE"},{"jml_guru":19,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Arjowinangun No. 07","nama":"SD N ARJOWINANGUN 02 KOTA MALANG","sekolah_id":20539437,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":13,"total_siswa_l":17,"is_negeri":"TRUE"},{"jml_guru":23,"jml_kompetensi":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20534059.150209071549.png","alamat":"Jl. Pelabuhan Bakauheni 199","nama":"SD N BAKALAN KRAJAN 01 KOTA MALANG","sekolah_id":20534059,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":16,"total_siswa_l":16,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Pelabuhan Ketapang 1","nama":"SD N BAKALAN KRAJAN 02 KOTA MALANG","sekolah_id":20534058,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":16,"total_siswa_l":13,"is_negeri":"TRUE"},{"jml_guru":23,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Balearjosari 1","nama":"SD N BALEARJOSARI 01 KOTA MALANG","sekolah_id":20539438,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":56,"total_siswa_l":86,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Pahlawan 375B","nama":"SD N BALEARJOSARI 02 KOTA MALANG","sekolah_id":20534045,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":16,"total_siswa_l":20,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Bandulan 1c /7","nama":"SD N BANDULAN 01 KOTA MALANG","sekolah_id":20534046,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":19,"total_siswa_l":12,"is_negeri":"TRUE"},{"jml_guru":13,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Bandulan 198","nama":"SD N BANDULAN 02 KOTA MALANG","sekolah_id":20534047,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":23,"total_siswa_l":17,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Bandulan 9/593","nama":"SD N BANDULAN 03 KOTA MALANG","sekolah_id":20534048,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":23,"total_siswa_l":21,"is_negeri":"TRUE"},{"jml_guru":12,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Bandulan 8/B2 31","nama":"SD N BANDULAN 04 KOTA MALANG","sekolah_id":20534049,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":16,"total_siswa_l":14,"is_negeri":"TRUE"},{"jml_guru":11,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Bandulan Baru 251A","nama":"SD N BANDULAN 05 KOTA MALANG","sekolah_id":20534050,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":21,"total_siswa_l":19,"is_negeri":"TRUE"},{"jml_guru":31,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. S. Supriadi No. 179","nama":"SD N BANDUNGREJOSARI 01 KOTA MALANG","sekolah_id":20534051,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":26,"total_siswa_l":42,"is_negeri":"TRUE"},{"jml_guru":22,"jml_kompetensi":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20534054.png","alamat":"Jl. Klayatan 2/176 Malang","nama":"SD N BANDUNGREJOSARI 02 KOTA MALANG","sekolah_id":20534054,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":17,"total_siswa_l":19,"is_negeri":"TRUE"},{"jml_guru":23,"jml_kompetensi":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20534055.150424074626.png","alamat":"Jl. Janti Selatan No. 69 Malang","nama":"SD N BANDUNGREJOSARI 03 KOTA MALANG","sekolah_id":20534055,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":64,"total_siswa_l":49,"is_negeri":"TRUE"},{"jml_guru":14,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Danuri 18","nama":"SD N BANDUNGREJOSARI 04 KOTA MALANG","sekolah_id":20534053,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":13,"total_siswa_l":10,"is_negeri":"TRUE"},{"jml_guru":18,"jml_kompetensi":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Kelud 10 A","nama":"SD N BARENG 01 KOTA MALANG","sekolah_id":20534056,"jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_dunia_usaha":"0","jml_lulusan_mandiri":"0","jml_lulusan_wiraswasta":"0","total_siswa_p":17,"total_siswa_l":18,"is_negeri":"TRUE"}]}';
+var n2='{"data": [{"jml_guru":0,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD BINA BANGSA CHRISTIAN SCHOOL","sekolah_id":20570230,"npsn":null,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Malenggang 12-14 Malang","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":0,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":0,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":0,"jml_siswa_l7":"0","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":0,"is_negeri":"TRUE","total_siswa":0},{"jml_guru":27,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N ARJOSARI 01 KOTA MALANG","sekolah_id":20534070,"npsn":20534070,"logo":"http://s.sim.siap-online.com/upload/sekolah/20534070.150309112026.png","alamat":"Jl. Teluk Pelabuhan Ratu 05","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":41,"jml_siswa_p3":40,"jml_siswa_p0":"0","jml_siswa_p1":38,"jml_siswa_p6":40,"jml_siswa_p7":"0","jml_siswa_p4":42,"jml_siswa_p5":53,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":254,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":43,"jml_siswa_l7":"0","jml_siswa_l5":32,"jml_siswa_l2":36,"jml_siswa_l3":33,"jml_siswa_l0":"0","jml_siswa_l1":46,"jml_siswa_l4":38,"total_siswa_l":228,"is_negeri":"TRUE","total_siswa":482},{"jml_guru":14,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N ARJOSARI 02 KOTA MALANG","sekolah_id":20534071,"npsn":20534071,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Teluk Pelabuhan Ratu 40","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":20,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":1,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":21,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":16,"jml_siswa_l7":"0","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":16,"is_negeri":"TRUE","total_siswa":37},{"jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N ARJOSARI 03 KOTA MALANG","sekolah_id":20534072,"npsn":20534072,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Teluk Perigi 1","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":3,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":1,"jml_siswa_p6":6,"jml_siswa_p7":"0","jml_siswa_p4":2,"jml_siswa_p5":4,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":16,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":4,"jml_siswa_l7":"0","jml_siswa_l5":8,"jml_siswa_l2":0,"jml_siswa_l3":2,"jml_siswa_l0":"0","jml_siswa_l1":2,"jml_siswa_l4":0,"total_siswa_l":16,"is_negeri":"TRUE","total_siswa":32},{"jml_guru":19,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N ARJOWINANGUN 02 KOTA MALANG","sekolah_id":20539437,"npsn":20539437,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Arjowinangun No. 07","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":13,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":13,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":17,"jml_siswa_l7":"0","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":17,"is_negeri":"TRUE","total_siswa":30},{"jml_guru":23,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N BAKALAN KRAJAN 01 KOTA MALANG","sekolah_id":20534059,"npsn":20534059,"logo":"http://s.sim.siap-online.com/upload/sekolah/20534059.150209071549.png","alamat":"Jl. Pelabuhan Bakauheni 199","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":0,"jml_siswa_p7":"0","jml_siswa_p4":9,"jml_siswa_p5":7,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":16,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":0,"jml_siswa_l7":"0","jml_siswa_l5":5,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":11,"total_siswa_l":16,"is_negeri":"TRUE","total_siswa":32},{"jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N BAKALAN KRAJAN 02 KOTA MALANG","sekolah_id":20534058,"npsn":20534058,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Pelabuhan Ketapang 1","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":10,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":6,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":16,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":6,"jml_siswa_l7":"0","jml_siswa_l5":7,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":13,"is_negeri":"TRUE","total_siswa":29},{"jml_guru":23,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N BALEARJOSARI 01 KOTA MALANG","sekolah_id":20539438,"npsn":20539438,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Balearjosari 1","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":19,"jml_siswa_p3":11,"jml_siswa_p0":"0","jml_siswa_p1":16,"jml_siswa_p6":4,"jml_siswa_p7":"0","jml_siswa_p4":6,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":56,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":12,"jml_siswa_l7":"0","jml_siswa_l5":0,"jml_siswa_l2":26,"jml_siswa_l3":13,"jml_siswa_l0":"0","jml_siswa_l1":31,"jml_siswa_l4":4,"total_siswa_l":86,"is_negeri":"TRUE","total_siswa":142},{"jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N BALEARJOSARI 02 KOTA MALANG","sekolah_id":20534045,"npsn":20534045,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Pahlawan 375B","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":9,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":7,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":16,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":8,"jml_siswa_l7":"0","jml_siswa_l5":12,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":20,"is_negeri":"TRUE","total_siswa":36},{"jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","jml_lulusan_wiraswasta":"0","jml_lulusan_mandiri":"0","jml_lulusan_dunia_usaha":"0","nama":"SD N BANDULAN 01 KOTA MALANG","sekolah_id":20534046,"npsn":20534046,"logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Raya Bandulan 1c /7","jml_sarana":"0","jml_prasarana":"0","sarpras":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":17,"jml_siswa_p6":0,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":2,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":19,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":0,"jml_siswa_l7":"0","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":12,"jml_siswa_l4":0,"total_siswa_l":12,"is_negeri":"TRUE","total_siswa":31}]}';
+var n3='{"data": [{"jml_prasarana":"0","jml_guru":30,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533946.150421112208.png","alamat":"Jl. Kemantren II No.26","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":"0","jml_siswa_p3":"0","jml_siswa_p0":"0","jml_siswa_p1":"0","jml_siswa_p6":"0","jml_siswa_p7":"0","jml_siswa_p4":"0","jml_siswa_p5":"0","jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":"0","jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MIN MALANG 2","jml_lulusan_dunia_usaha":"0","sekolah_id":20533946,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":"0","jml_siswa_l7":"0","is_negeri":"TRUE","jml_siswa_l5":"0","jml_siswa_l2":"0","jml_siswa_l3":"0","jml_siswa_l0":"0","jml_siswa_l1":"0","jml_siswa_l4":"0","total_siswa_l":"0","total_siswa":"0"}]}';
+var s1='{"data": [{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20587986.150305134245.png","npsn":"","alamat":"JL. KI AGENG GRIBIG NO 566 RT 6 / RW 1 MALANG","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":5,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":10,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":15,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL IMAN","jml_lulusan_dunia_usaha":"0","sekolah_id":20587986,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":7,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":8,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":15,"total_siswa":30},{"jml_prasarana":"0","jml_guru":10,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","npsn":"","alamat":"Jl. KH. Malik Gg.21 No.87","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":11,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":11,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-AZHAR","jml_lulusan_dunia_usaha":"0","sekolah_id":20533920,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":19,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":19,"total_siswa":30},{"jml_prasarana":"0","jml_guru":13,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533947.141129092132.png","npsn":"","alamat":"Jl. C. Telaga Wangi No.39","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":15,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":15,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-FATTAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533947,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":22,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":22,"total_siswa":37},{"jml_prasarana":"0","jml_guru":25,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533934.png","npsn":"","alamat":"Jl. Selat Sunda VIII/D-9  No 20","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":40,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":40,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-HUDA","jml_lulusan_dunia_usaha":"0","sekolah_id":20533934,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":38,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":38,"total_siswa":78},{"jml_prasarana":"0","jml_guru":10,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533933.png","npsn":"","alamat":"Jl. Muharto VB RT.09 RW.06 Kotalama","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":16,"jml_siswa_p3":16,"jml_siswa_p0":"0","jml_siswa_p1":1,"jml_siswa_p6":15,"jml_siswa_p7":"0","jml_siswa_p4":17,"jml_siswa_p5":11,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":76,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-KHOIROT","jml_lulusan_dunia_usaha":"0","sekolah_id":20533933,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":15,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":13,"jml_siswa_l2":19,"jml_siswa_l3":24,"jml_siswa_l0":"0","jml_siswa_l1":4,"jml_siswa_l4":21,"total_siswa_l":96,"total_siswa":172},{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533973.png","npsn":"","alamat":"Jl. K.H. Usman  64","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":4,"jml_siswa_p7":"0","jml_siswa_p4":1,"jml_siswa_p5":8,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":13,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-USMAN","jml_lulusan_dunia_usaha":"0","sekolah_id":20533973,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":12,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":4,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":1,"total_siswa_l":17,"total_siswa":30},{"jml_prasarana":"0","jml_guru":14,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533921.141029110512.png","npsn":"","alamat":"Jl. KH. Malik  No.1 RT.01/04","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":2,"jml_siswa_p3":2,"jml_siswa_p0":"0","jml_siswa_p1":2,"jml_siswa_p6":2,"jml_siswa_p7":"0","jml_siswa_p4":3,"jml_siswa_p5":3,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":14,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI ALHAYATUL ISLAMIYAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533921,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":8,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":2,"jml_siswa_l2":3,"jml_siswa_l3":3,"jml_siswa_l0":"0","jml_siswa_l1":3,"jml_siswa_l4":2,"total_siswa_l":21,"total_siswa":35},{"jml_prasarana":"0","jml_guru":29,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20539408.png","npsn":"","alamat":"Jl. Ade Irma Suryani 50, Jl. Syarif Al Qodri No. 35","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":81,"jml_siswa_p3":79,"jml_siswa_p0":"0","jml_siswa_p1":81,"jml_siswa_p6":81,"jml_siswa_p7":"0","jml_siswa_p4":71,"jml_siswa_p5":69,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":462,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI ATTARAQQIE","jml_lulusan_dunia_usaha":"0","sekolah_id":20539408,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":62,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":72,"jml_siswa_l2":70,"jml_siswa_l3":73,"jml_siswa_l0":"0","jml_siswa_l1":81,"jml_siswa_l4":58,"total_siswa_l":416,"total_siswa":878},{"jml_prasarana":"0","jml_guru":7,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533932.150318075322.png","npsn":"","alamat":"Jl. Kapt. P. Tendean II/03","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":3,"jml_siswa_p3":3,"jml_siswa_p0":"0","jml_siswa_p1":1,"jml_siswa_p6":2,"jml_siswa_p7":"0","jml_siswa_p4":1,"jml_siswa_p5":2,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":12,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI BADRUSSALAM","jml_lulusan_dunia_usaha":"0","sekolah_id":20533932,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":4,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":3,"jml_siswa_l2":5,"jml_siswa_l3":1,"jml_siswa_l0":"0","jml_siswa_l1":2,"jml_siswa_l4":3,"total_siswa_l":18,"total_siswa":30},{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20574726.141128081404.png","npsn":"","alamat":"Jl. Sampurna 77 Malang 65138","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":9,"jml_siswa_p7":"0","jml_siswa_p4":6,"jml_siswa_p5":6,"jml_siswa_p8":"0","jml_siswa_p9":"0","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":21,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI CEMOROKANDANG","jml_lulusan_dunia_usaha":"0","sekolah_id":20574726,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":9,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":10,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":8,"total_siswa_l":27,"total_siswa":48}]}';
+var s2 ='{"data": [{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Gajayana Gg.3 D.570","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":2,"jml_siswa_p3":4,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":5,"jml_siswa_p7":"0","jml_siswa_p4":2,"jml_siswa_p5":5,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":null,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":18,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD AISYIYAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20539409,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":5,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":4,"jml_siswa_l2":2,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":2,"total_siswa_l":13,"total_siswa":31},{"jml_prasarana":"0","jml_guru":34,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20539410.140711090039.png","alamat":"JL. ARUMBA NO.31 RT.001/RW.004","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":42,"jml_siswa_p3":40,"jml_siswa_p0":"0","jml_siswa_p1":44,"jml_siswa_p6":54,"jml_siswa_p7":"0","jml_siswa_p4":19,"jml_siswa_p5":26,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20539410,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":225,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD ANAK SALEH","jml_lulusan_dunia_usaha":"0","sekolah_id":20539410,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":35,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":42,"jml_siswa_l2":52,"jml_siswa_l3":33,"jml_siswa_l0":"0","jml_siswa_l1":51,"jml_siswa_l4":17,"total_siswa_l":230,"total_siswa":455},{"jml_prasarana":"0","jml_guru":12,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20554811.150306103427.png","alamat":"JL. ADE IRMA SURYANI NO. 8 MALANG 65119","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":7,"jml_siswa_p3":4,"jml_siswa_p0":"0","jml_siswa_p1":4,"jml_siswa_p6":6,"jml_siswa_p7":"0","jml_siswa_p4":9,"jml_siswa_p5":7,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20554811,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":37,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD BINA BUDI MULIA","jml_lulusan_dunia_usaha":"0","sekolah_id":20554811,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":7,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":3,"jml_siswa_l2":4,"jml_siswa_l3":6,"jml_siswa_l0":"0","jml_siswa_l1":4,"jml_siswa_l4":8,"total_siswa_l":32,"total_siswa":69},{"jml_prasarana":"0","jml_guru":5,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. Brawijaya 1","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":1,"jml_siswa_p7":"0","jml_siswa_p4":6,"jml_siswa_p5":4,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20533862,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":11,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD BRAWIJAYA 1","jml_lulusan_dunia_usaha":"0","sekolah_id":20533862,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":9,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":11,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":7,"total_siswa_l":27,"total_siswa":38},{"jml_prasarana":"0","jml_guru":27,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"JL. CIPAYUNG No. 8","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":70,"jml_siswa_p3":57,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":24,"jml_siswa_p7":"0","jml_siswa_p4":39,"jml_siswa_p5":21,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20533896,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":211,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD BRAWIJAYA SMART SCHOOL","jml_lulusan_dunia_usaha":"0","sekolah_id":20533896,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":43,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":35,"jml_siswa_l2":67,"jml_siswa_l3":50,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":47,"total_siswa_l":242,"total_siswa":453},{"jml_prasarana":"0","jml_guru":0,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20586398.png","alamat":"JL. Sarangan, No. 32,  Malang.","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":1,"jml_siswa_p3":3,"jml_siswa_p0":"0","jml_siswa_p1":8,"jml_siswa_p6":0,"jml_siswa_p7":"0","jml_siswa_p4":2,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":69774747,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":14,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD Indonesia Interactive Standard School","jml_lulusan_dunia_usaha":"0","sekolah_id":20586398,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":0,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":5,"jml_siswa_l3":4,"jml_siswa_l0":"0","jml_siswa_l1":8,"jml_siswa_l4":2,"total_siswa_l":19,"total_siswa":33},{"jml_prasarana":"0","jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. S. Supriadi 4 no.2306","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":0,"jml_siswa_p7":"0","jml_siswa_p4":17,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":null,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":17,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD INDRIYASANA","jml_lulusan_dunia_usaha":"0","sekolah_id":20534060,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":0,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":13,"total_siswa_l":13,"total_siswa":30},{"jml_prasarana":"0","jml_guru":34,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533931.150504082028.png","alamat":"Griyashanta Blok M (Jl. Soekarno Hatta) Malang","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":14,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":17,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20533931,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":31,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD INSAN AMANAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533931,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":16,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":12,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":28,"total_siswa":59},{"jml_prasarana":"0","jml_guru":11,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533901.150317075151.png","alamat":"Jl. Kol. Sugiono VIII/50","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":3,"jml_siswa_p3":2,"jml_siswa_p0":"0","jml_siswa_p1":3,"jml_siswa_p6":3,"jml_siswa_p7":"0","jml_siswa_p4":2,"jml_siswa_p5":4,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":20533901,"jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":17,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"SD ISLAM AL HIKMAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533901,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":1,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":1,"jml_siswa_l2":2,"jml_siswa_l3":3,"jml_siswa_l0":"0","jml_siswa_l1":2,"jml_siswa_l4":1,"total_siswa_l":10,"total_siswa":27}]}';
+var s3='{"data": [{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20587986.150305134245.png","alamat":"JL. KI AGENG GRIBIG NO 566 RT 6 / RW 1 MALANG","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":5,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":10,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":15,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL IMAN","jml_lulusan_dunia_usaha":"0","sekolah_id":20587986,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":7,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":8,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":15,"total_siswa":30},{"jml_prasarana":"0","jml_guru":10,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://malangkota.siap-online.com/assets/img/global/sekolah.png","alamat":"Jl. KH. Malik Gg.21 No.87","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":11,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":11,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-AZHAR","jml_lulusan_dunia_usaha":"0","sekolah_id":20533920,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":19,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":19,"total_siswa":30},{"jml_prasarana":"0","jml_guru":13,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533947.141129092132.png","alamat":"Jl. C. Telaga Wangi No.39","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":15,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":15,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-FATTAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533947,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":22,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":22,"total_siswa":37},{"jml_prasarana":"0","jml_guru":25,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533934.png","alamat":"Jl. Selat Sunda VIII/D-9  No 20","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":40,"jml_siswa_p7":"0","jml_siswa_p4":0,"jml_siswa_p5":0,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":40,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-HUDA","jml_lulusan_dunia_usaha":"0","sekolah_id":20533934,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":38,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":0,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":0,"total_siswa_l":38,"total_siswa":78},{"jml_prasarana":"0","jml_guru":10,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533933.png","alamat":"Jl. Muharto VB RT.09 RW.06 Kotalama","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":16,"jml_siswa_p3":16,"jml_siswa_p0":"0","jml_siswa_p1":1,"jml_siswa_p6":15,"jml_siswa_p7":"0","jml_siswa_p4":17,"jml_siswa_p5":11,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":76,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-KHOIROT","jml_lulusan_dunia_usaha":"0","sekolah_id":20533933,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":15,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":13,"jml_siswa_l2":19,"jml_siswa_l3":24,"jml_siswa_l0":"0","jml_siswa_l1":4,"jml_siswa_l4":21,"total_siswa_l":96,"total_siswa":172},{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533973.png","alamat":"Jl. K.H. Usman  64","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":4,"jml_siswa_p7":"0","jml_siswa_p4":1,"jml_siswa_p5":8,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":13,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI AL-USMAN","jml_lulusan_dunia_usaha":"0","sekolah_id":20533973,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":12,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":4,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":1,"total_siswa_l":17,"total_siswa":30},{"jml_prasarana":"0","jml_guru":14,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533921.141029110512.png","alamat":"Jl. KH. Malik  No.1 RT.01/04","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":2,"jml_siswa_p3":2,"jml_siswa_p0":"0","jml_siswa_p1":2,"jml_siswa_p6":2,"jml_siswa_p7":"0","jml_siswa_p4":3,"jml_siswa_p5":3,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":14,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI ALHAYATUL ISLAMIYAH","jml_lulusan_dunia_usaha":"0","sekolah_id":20533921,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":8,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":2,"jml_siswa_l2":3,"jml_siswa_l3":3,"jml_siswa_l0":"0","jml_siswa_l1":3,"jml_siswa_l4":2,"total_siswa_l":21,"total_siswa":35},{"jml_prasarana":"0","jml_guru":29,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20539408.png","alamat":"Jl. Ade Irma Suryani 50, Jl. Syarif Al Qodri No. 35","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":81,"jml_siswa_p3":79,"jml_siswa_p0":"0","jml_siswa_p1":81,"jml_siswa_p6":81,"jml_siswa_p7":"0","jml_siswa_p4":71,"jml_siswa_p5":69,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":462,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI ATTARAQQIE","jml_lulusan_dunia_usaha":"0","sekolah_id":20539408,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":62,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":72,"jml_siswa_l2":70,"jml_siswa_l3":73,"jml_siswa_l0":"0","jml_siswa_l1":81,"jml_siswa_l4":58,"total_siswa_l":416,"total_siswa":878},{"jml_prasarana":"0","jml_guru":7,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20533932.150318075322.png","alamat":"Jl. Kapt. P. Tendean II/03","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":3,"jml_siswa_p3":3,"jml_siswa_p0":"0","jml_siswa_p1":1,"jml_siswa_p6":2,"jml_siswa_p7":"0","jml_siswa_p4":1,"jml_siswa_p5":2,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":12,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI BADRUSSALAM","jml_lulusan_dunia_usaha":"0","sekolah_id":20533932,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":4,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":3,"jml_siswa_l2":5,"jml_siswa_l3":1,"jml_siswa_l0":"0","jml_siswa_l1":2,"jml_siswa_l4":3,"total_siswa_l":18,"total_siswa":30},{"jml_prasarana":"0","jml_guru":9,"jml_kompetensi":"0","jml_lulusan_tahun_lalu":"0","logo":"http://s.sim.siap-online.com/upload/sekolah/20574726.141128081404.png","alamat":"Jl. Sampurna 77 Malang 65138","jml_sarana":"0","sarpras":"0","jml_lulusan_wiraswasta":"0","jml_siswa_p2":0,"jml_siswa_p3":0,"jml_siswa_p0":"0","jml_siswa_p1":0,"jml_siswa_p6":9,"jml_siswa_p7":"0","jml_siswa_p4":6,"jml_siswa_p5":6,"jml_siswa_p8":"0","jml_siswa_p9":"0","npsn":"","jml_siswa_p10":"0","jml_siswa_p11":"0","jml_siswa_p12":"0","total_siswa_p":21,"jml_siswa_l10":"0","jml_siswa_l11":"0","jml_siswa_l12":"0","jml_lulusan_mandiri":"0","nama":"MI CEMOROKANDANG","jml_lulusan_dunia_usaha":"0","sekolah_id":20574726,"jml_siswa_l8":"0","jml_siswa_l9":"0","jml_siswa_l6":9,"jml_siswa_l7":"0","is_negeri":"FALSE","jml_siswa_l5":10,"jml_siswa_l2":0,"jml_siswa_l3":0,"jml_siswa_l0":"0","jml_siswa_l1":0,"jml_siswa_l4":8,"total_siswa_l":27,"total_siswa":48}]}';
+objn1 = JSON.parse(n1);
+objn2 = JSON.parse(n2); 
+objn3 = JSON.parse(n3);
+objs1 = JSON.parse(s1);
+objs2 = JSON.parse(s2); 
+objs3 = JSON.parse(s3);   
+var y;
+var a="";
+var status ="";
+var jumlah1=0;
+var jumlah2=0;
+	for(y=0; y<10; y++){
+		if(objn1.data[y].is_negeri=="TRUE"){
+			status="Negeri";
+		}else{
+			status="Swasta";
+		}
+	a +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objn1.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objn1.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objn1.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objn1.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objn1.data[y].total_siswa_l+'</td><td>'+objn1.data[y].total_siswa_p+'</td></tr>';
+	jumlah1=(jumlah1+objn1.data[y].total_siswa_l)
+	jumlah2=(jumlah2+objn1.data[y].total_siswa_p)
+	}						
+    document.getElementById("demo").innerHTML = a;	
+    document.getElementById("total").innerHTML = y;
+    document.getElementById("total_l").innerHTML = jumlah1;
+    document.getElementById("total_p").innerHTML = jumlah2;
+	
+	
+        var bnd="";			
+        var bnd1= "";
+		
+	bnd = document.form.sts.value;
+	bnd1 = document.form.jenis.value;
+	
+function quickSelect() {
+	jumlah1=0;
+	jumlah2=0;
+	bnd = document.form.sts.value;
+	bnd1 = document.form.jenis.value;
+		var text="";
+		if (bnd == "negeri" && bnd1=="naungan"){
+			for(y=0; y<10; y++){
+				if(objn1.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			text +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objn1.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objn1.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objn1.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objn1.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objn1.data[y].total_siswa_l+'</td><td>'+objn1.data[y].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+objn1.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objn1.data[y].total_siswa_p)
+			}	
+		}else if(bnd == "negeri" && bnd1=="dinas"){
+			for(y=0; y<objn2.data.length; y++){
+				if(objn2.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			text +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objn2.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objn2.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objn2.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objn2.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objn2.data[y].total_siswa_l+'</td><td>'+objn2.data[y].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+objn2.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objn2.data[y].total_siswa_p)
+			}
+		}else if(bnd == "negeri" && bnd1=="depag"){
+			for(y=0; y<objn3.data.length; y++){
+				if(objn3.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			jumlah1=(jumlah1+objn3.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objn3.data[y].total_siswa_p)
+			}
+		}else if(bnd == "swasta" && bnd1=="naungan"){
+			for(y=0; y<objs1.data.length; y++){
+				if(objs1.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			text +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objs1.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objs1.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objs1.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objs1.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objs1.data[y].total_siswa_l+'</td><td>'+objs1.data[y].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+objs1.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objs1.data[y].total_siswa_p)
+			}
+		}else if(bnd == "swasta" && bnd1=="dinas"){
+			for(y=0; y<objs2.data.length; y++){
+				if(objs2.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			text +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objs2.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objs2.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objs2.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objs2.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objs2.data[y].total_siswa_l+'</td><td>'+objs2.data[y].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+objs2.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objs2.data[y].total_siswa_p)
+			}
+		}else{
+			for(y=0; y<objs3.data.length; y++){
+				if(objs3.data[y].is_negeri=="TRUE"){
+					status="Negeri";
+				}else{
+					status="Swasta";
+				}
+			text +='<tr><td>'+(y+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+objs3.data[y].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+objs3.data[y].nama+'</a></h3><span class="desc tips-ls" alt="show">'+objs3.data[y].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+objs3.data[y].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+objs3.data[y].total_siswa_l+'</td><td>'+objs3.data[y].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+objs3.data[y].total_siswa_l)
+			jumlah2=(jumlah2+objs3.data[y].total_siswa_p)
+			}
+		}
+			document.getElementById("demo").innerHTML =text;
+			document.getElementById("total").innerHTML = y;
+			document.getElementById("total_l").innerHTML = jumlah1;
+			document.getElementById("total_p").innerHTML = jumlah2;
+     }
+		
+function myFunction() {	
+	jumlah1=0;
+	jumlah2=0;
+	var datab = [];
+	var j;
+	var x;
+	var kata1=document.formsearch.fname.value;
+	var t="";
+	
+	if (bnd == "negeri" && bnd1=="naungan"){
+		var y
+		for (y =0; y< 10; y++){
+			j =objn1.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objn1.data[y]);
+			}
+		}
+	}else if(bnd == "negeri" && bnd1=="dinas"){
+		for (y =0; y< objn2.data.length; y++){
+			j =objn2.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objn2.data[y]);
+			}
+		}
+	}else if(bnd == "negeri" && bnd1=="depag"){
+		for (y =0; y< objn3.data.length; y++){
+			j =objn3.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objn3.data[y]);
+			}
+		}
+	}else if(bnd == "swasta" && bnd1=="naungan"){
+		for (y =0; y< objs1.data.length; y++){
+			j =objs1.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objs1.data[y]);
+			}
+		}
+	}else if(bnd == "swasta" && bnd1=="dinas"){
+		for (y =0; y< objs2.data.length; y++){
+			j =objs2.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objs2.data[y]);
+			}
+		}
+	}else{
+		for (y =0; y< objs3.data.length; y++){
+			j =objs3.data[y].nama.indexOf(kata1);
+			if(j > -1){
+				datab.push(objs3.data[y]);
+			}
+		}
+	}
+	
+	
+	
+	if(datab.length>0){
+		for(x=0; x<datab.length; x++){
+			if(datab[x].is_negeri=="TRUE"){
+				status="Negeri";
+			}else{
+				status="Swasta";
+			}
+		t +='<tr><td>'+(x+1)+'</td><td class="al"><div class="namecard js-render-kota"><img align="left" src="'+datab[x].logo+'"><h3><a class="tips-rs js-mod-tips-ajx mod-rm" href="javascript:">'+datab[x].nama+'</a></h3><span class="desc tips-ls" alt="show">'+datab[x].sekolah_id+'</span><input type="hidden" class="js-sekolahId" value="'+datab[x].sekolah_id+'"></div></td><td class="al desc">'+status+'</td><td>'+datab[x].total_siswa_l+'</td><td>'+datab[x].total_siswa_p+'</td></tr>';
+			jumlah1=(jumlah1+datab[x].total_siswa_l);
+			jumlah2=(jumlah2+datab[x].total_siswa_p)
+		}
+	}else{
+		t='data tidak ditemukan';
+	}
+	
+    document.getElementById("demo").innerHTML =t;
+    document.getElementById("total").innerHTML = datab.length;
+			document.getElementById("total_l").innerHTML = jumlah1;
+			document.getElementById("total_p").innerHTML = jumlah2;
+}
+
+</script>
+						</tbody>
+						<tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Siswa <span class="js-jenjang">SD/MI</span>:</td>
+                              <td class="med"><span class="js-siswa-total-l" id="total_l"></span></td>
+                              <td class="med"><span class="js-siswa-total-p" id="total_p"></span></td>
+                           </tr>
+                        </tfoot>
+						</table>
+                  </div>
+				                    <div class="box-cont">
+                     <div class="nav-cont rnd5 rnd-b clear js-navigation"><div class="nav-cont rnd5 clear"><div class="fr nav-group"><div class="nav"><a class="prev js-paging-nav" rel="-1"></a><a class="paging js-paging" rel="1"><span class="js-value">Hal 1 dari 1</span></a><div class="tips-modal rnd3 js-options" style="display: none;"><div class="point"></div><div class="tips-modal-cont"><div class="nav-pages"><div class="nav-no" style="margin-top: 0px;"><ul><li rel="1" class="on">1</li><li rel="2">2</li></ul></div></div><div class="nav-pages-nav" style="display: none;"><a class="act ic-p-u tips-ls" href="javascript:" rel="up"></a><a class="act ic-p-d tips-ls" href="javascript:" rel="down"></a></div></div></div><a class="next js-paging-nav" rel="1"></a></div></div><div class="fr nav clear"><a class="paging js-select js-select-limit" style="display: none;"></a></div></div></div>
+                  </div>
+                  <!-- modal tips -->
+                  <div style="display: none">
+                     
+                  </div>
+         </div>
+      </div>
+   </div>
+</div>

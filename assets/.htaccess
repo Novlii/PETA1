@@ -1,0 +1,5 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.(\d+)\.(html|css|js|png|jpe?g|gif)$ $1.$3 [L]

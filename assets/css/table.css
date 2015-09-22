@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* table 
+	margin:0px 10px 10px 0;
+*/
+/* global table */
+.bigtxt,
+.tbl-form .big,
+.tbl-data .big{
+	font-size:18px;
+}
+.tbl-data,
+.tbl-form {
+	border-collapse:collapse;
+}
+.tbl-data th,
+.tbl-data td {
+	padding:10px;
+}
+.tbl-form td {
+	padding:0;
+}
+.tbl-data th,
+.tbl-data td {
+	border-bottom: 1px solid #e9e9e9;
+}
+.tbl-form th,
+.tbl-form td {
+	border-bottom: none;
+}
+.tbl-data th,
+.tbl-form th {
+	color:#007C72;
+}
+/* table caption */
+.tbl-data > caption {
+	background:#E6EEED;
+	display:table-caption;
+	padding:10px;
+	border-bottom:1px solid #C7E6E4;
+	font: 16px "Helvetica neue",Helvetica,Arial,sans-serif;
+	text-align:left;
+}
+/* application table */
+.tbl-data > thead > tr > th {
+	background-color:#f3f3f3;
+}
+.tbl-data > tbody > tr.selected > th,
+.tbl-data > tbody > tr:hover > th{
+	background-color:#e0e0e0;
+}
+.tbl-data > tbody > tr.selected,
+.tbl-data > tbody > tr:hover{
+	background-color:#ffffcc;
+}
+/* application table edit mode */
+.tbl-data.editmode > tbody > tr.selected,
+.tbl-data.editmode > tbody > tr:hover{
+	background-color:#FFFFCC;
+}
+.tbl-data.editmode th.check:first-child,
+.tbl-data.editmode > thead > tr > th:first-child,
+.tbl-data.editmode > tbody > tr > td:first-child{
+	padding-right:0;
+}
+/* form table */
+.tbl-form > thead > tr > th {
+	background-color:#eef4e5;
+}
+/* editable cell */
+.tbl-data > tbody > tr.selected > th{
+	font-weight:bold !important;
+}
+/* other
+.tbl-data td.no:before{
+	font-size:16px;
+	font-weight:bold;
+} */
+.tbl-data tr >.noed,
+.tbl-data tr >.no{
+	padding-right:0;
+	text-align:right;
+}
+.tbl-data .noed-start { counter-reset: nomer }
+.tbl-data .noed{ counter-increment: nomer }
+.tbl-data td.noed:before{
+	content: counter(nomer);
+	color:#999;
+}
+.tbl-form .act {
+	text-align:center !important;
+}
+.tbl-form > tr:hover > .nohov {
+	background:none;
+}
+.tbl-form .number{
+	text-align:right;
+	width:50px;
+}
+.tbl-form .num-2digit{
+	text-align:right;
+	width:30px;
+}
+/* table */
+tbody.fl {
+	margin-right:20px;
+}
+tbody.fl:last-child {
+	margin-right:0;
+}
+table.vt td{
+	vertical-align:top;
+}
+table.vm td{
+	vertical-align:middle;
+}
+/* table in modalbox */
+.modalbox tbody.fl {
+	display:table-cell;
+}
+/* application table - column */
+.tbl-data td.c-check{
+	background-image:url(../img/ic/ic7-cross.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	opacity:0.3;
+}
+.tbl-data td.c-check.on{
+	background-image:url(../img/ic/ic12-checkmark.png);
+	opacity:1;
+}
+.tbl-form td.c-check.on{
+	padding:10px;
+	background-image:none;
+	opacity:1;
+}
+.tbl-form td.c-check.on .ic{
+	margin-bottom:10px;
+	clear:right;
+}
+.tbl-data td.c-blue.on,
+.tbl-data th.c-blue:hover{
+	background-color:#dee6fc;
+}
+.tbl-data td.c-green.on,
+.tbl-data th.c-green:hover{
+	background-color:#e6f1d6;
+}
+.tbl-data td.c-purple.on,
+.tbl-data th.c-purple:hover{
+	background-color:#e6e0f7;
+}
+.tbl-data td.c-brown.on,
+.tbl-data th.c-brown:hover{
+	background-color:#fcebd8;
+}
+.tbl-data td.c-red.on,
+.tbl-data th.c-red:hover{
+	background-color:#f9dedb;
+}

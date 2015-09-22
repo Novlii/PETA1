@@ -1,0 +1,259 @@
+<div id="js-pagediv-index">
+    <div class="workspc">
+        <div class="workspc-l" style="background: #f3f3f3; padding-top: 0;">
+            <div class="box-cont ar">
+                <h3 class="desc half fl al">Perubahan data bersifat Real Time Online oleh para Admin Sekolah</h3>
+                <h1 class="desc half fr ar">Pemetaan Mutu Pendidikan Indonesia</h1>
+            </div>
+            <iframe width="1000" height="450" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col361+from+1LzOPSo-WX0LtLpfW5gUMBtfQljW0BoevlBQzvq0l&amp;viz=MAP&amp;h=false&amp;lat=-7.4460316615445725&amp;lng=113.59422436093746&amp;t=1&amp;z=8&amp;l=col361&amp;y=2&amp;tmplt=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
+            <div class="page-crumb js-crumb" id="c-data">
+                <a class="ic  lbl">Pemetaan Mutu Pendidikan Indonesia</a>
+                <a class="ic ic-p-r lbl" href="/peta">Jawa Timur</a>
+            </div>
+            <div class="box-cont">
+                <table class="page-title full">
+                    <tbody><tr>
+                            <td class="med-card menu-jenjang">
+                                <a href="javascript:" class="namecard on">
+                                    <img src="http://s.sim.siap-online.com/upload/dinas/205.png">
+                                    <h2>Provinsi Jawa Timur</h2>
+                                    <em class="desc">Dinas Pendidikan Prop. Jawa Timur</em>
+                                </a>
+                            </td>
+                            <!-- aktivasi btn -->
+                            <td class="vt js-aktivasi">
+                                <form class="fr">
+                                    <div class="button" onclick="window.location=''" style="margin:0 10px">
+                                        <b class="med">&nbsp;<br>Portal PPDB<br>&nbsp;</b>
+                                    </div>
+                                    <!--                           <div class="button js-aktivasi-btn" style="margin:0 10px">-->
+                                    <!--                              <b class="med">&nbsp;<br>Aktifkan Sekolah Anda<br>&nbsp;</b>-->
+                                    <!--                           </div>-->
+                                </form>
+                            </td>
+                            <!-- jenjang btn -->
+                            <td class="fr menu-jenjang js-menu-btn" style="display: none">
+                                <a class="icj icj-tk" href="#!/tk"><b>TK/PAUD</b></a>
+                                <a class="icj icj-sd" href="#!/sd"><b>SD/MI</b></a>
+                                <a class="icj icj-smp" href="#!/smp"><b>SMP/MTs</b></a>
+                                <a class="icj icj-sma" href="#!/sma"><b>SMA/MA</b></a>
+                                <a class="icj icj-smk" href="#!/smk"><b>SMK/MAK</b></a>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                <!-- home -->
+                <div style="background:#FFF" class="js-pagediv box-cont" id="js-pagediv-index">
+                    <div class="freearea clear" style="margin-bottom:15px">
+                        <div class="nav fl">
+                            <span><span class="big">Rekapitulasi Data Pendidikan <span class="sml">di</span> Kota Malang</span></span>
+                        </div>
+                        <form class="nav fr" name="form" onClick="quickSelect()">
+
+                            <select NAME="jenis" SIZE=1 style="width:147px" >
+                                <option VALUE="naungan">Seluruh Naungan</option>
+                                <option VALUE="dinas">Naungan Kemdikbud</option>
+                                <option VALUE="depag">Naungan Kemenag</option>
+                            </SELECT>							
+                        </form>
+
+                    </div>
+                    <style>
+                        input.tab-menu-radio {
+                            display: none;
+                        }
+                        label.tab-menu {
+                            display: inline-block;
+                            float: right;
+                            padding:10px 30px;
+                            cursor: pointer;
+                            z-index: 99;
+                            color: #0C8781;
+
+
+                        }
+                        /* End Tab menu styling*//* Tab content styling*/
+                        .tab-content {
+                            width: 920px;
+                            height: 380px;
+                            top:-3px;
+                            clear: both;
+
+                            position: relative;
+                            padding:20px;
+                            border-top:3px solid #CBD6D6;
+                        }
+                        /* End Tab content styling*//* CSS tab core */
+                        .tab-menu-radio:checked + label {
+                            -webkit-transition:all 1s; /* Optional */
+                            -moz-transition:all 1s; /* Optional */
+                            transition:all 1s; /* Optional */
+
+                        }
+                        .tab-content .tab {
+                            float: left;
+                            opacity: 0;
+                            width: 925px;
+                            height: 0px;
+
+                        }
+                        #tab-menu1:checked ~ .tab-content .tab-1,
+                        #tab-menu2:checked ~ .tab-content .tab-2,
+                        #tab-menu3:checked ~ .tab-content .tab-3,
+                        #tab-menu4:checked ~ .tab-content .tab-4  {
+                            -webkit-transition:opacity 1s; /* Optional */
+                            -moz-transition:opacity 1s; /* Optional */
+                            transition:opacity 1s; /* Optional */
+                            height: auto;
+                            opacity: 1;
+
+                        }body {
+
+                            font-family: "Open Sans", "Arial";
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #045404;
+                        }
+                        a:hover{
+                            color: #B7977B;
+                        }
+                        main {
+                            background: #FFF;
+                            width: 500px;
+                            height: 500px;
+                            margin: 50px auto;
+                            padding: 10px 30px 80px;
+                            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+                        }
+
+                        p {
+                            font-size: 13px;
+                        }
+
+                        /* Important code */
+                        input, section {
+                            clear: both;
+                            padding-top: 10px;
+                            display: none;
+                        }
+                        label {
+                            font-weight: bold;
+                            font-size: 14px;
+                            display: block;
+                            float: left;
+                            padding: 10px 30px;
+                            border-top: 2px solid transparent;
+                            border-right: 1px solid transparent;
+                            border-left: 1px solid transparent;
+                            border-bottom: 1px solid #DDD;
+                        }
+                        label:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                        #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5, #tab6:checked ~ #content6, #tab7:checked ~ #content7 {
+                            display: block;
+                        }
+                        input:checked + label {
+                            border-top-color: #0000;
+                            border-right-color: #DDD;
+                            border-left-color: #DDD;
+                            border-bottom-color: transparent;
+                            text-decoration: none;
+                        }
+                        /* End CSS tab core */
+                    </style>
+
+                    <div class="tab-container">
+
+                        <!-- Menu tab -->
+                        <input type="radio" name="tab-menu" class="tab-menu-radio" id="tab-menu1" checked />
+                        <label for="tab-menu1" class="tab-menu">Lihat Data</label>
+
+                        <input type="radio" name="tab-menu" class="tab-menu-radio" id="tab-menu2"/>
+                        <label for="tab-menu2" class="tab-menu">Lihat Grafik</label>
+
+
+                        <!-- End Menu tab -->
+
+                        <div class="tab-content">
+
+                            <!-- Konten tab -->
+                            <div class="tab tab-1">
+                                <div class="section menu-beranda clear js-jenjang-rekap" id="rekap"> 
+                                </div> 
+                            </div>      
+                            <div class="tab tab-2">      
+                                <div class="section menu-beranda clear js-jenjang-rekap" id="graph"> 
+                                </div>							   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    var dt1='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/tk","sekolah":27929,"siswa":182892,"guru":92080,"sarpras":22596,"lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/sd","sekolah":29146,"siswa":2032239,"guru":310164,"sarpras":518578,"lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/smp","sekolah":8884,"siswa":827549,"guru":126680,"sarpras":189213,"lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/sma","sekolah":3371,"siswa":305520,"guru":52005,"sarpras":27162,"lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/smk","sekolah":1958,"siswa":206232,"guru":36189,"sarpras":15744,"lulusan":4933,"kompetensi":341}]}';    
+    var dt2='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/tk","sekolah":38590,"siswa":122008,"guru":132144,"sarpras":35088,"lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/sd","sekolah":21291,"siswa":1646155,"guru":234071,"sarpras":484793,"lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/smp","sekolah":5128,"siswa":599283,"guru":80920,"sarpras":599283,"lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/sma","sekolah":1656,"siswa":113160,"guru":31939,"sarpras":25357,"lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/smk","sekolah":1958,"siswa":206232,"guru":36189,"sarpras":15744,"lulusan":4933,"kompetensi":341}]}';    
+    var dt3='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/tk","sekolah":8637,"siswa":64169,"guru":26008,"sarpras":5052,"lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/sd","sekolah":7855,"siswa":387976,"guru":76093,"sarpras":33785,"lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/smp","sekolah":3756,"siswa":228746,"guru":45764,"sarpras":11711,"lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/sma","sekolah":1715,"siswa":101525,"guru":20066,"sarpras":1805,"lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/smk","sekolah":0,"siswa":0,"guru":0,"sarpras":0,"lulusan":0,"kompetensi":0}]}';    
+    obj1 = JSON.parse(dt1);
+    obj2 = JSON.parse(dt2); 
+    obj3 = JSON.parse(dt3);   
+    var y;
+    var a="";
+    var graph="";
+    for(y=0; y<5; y++){
+        if(y==4){
+            a+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj1.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="#!/tk_lulusan">'+obj1.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+        }else{
+            a +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj1.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+        }
+    }						
+    document.getElementById("rekap").innerHTML = a;	
+    document.getElementById("graph").innerHTML =' <iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col2%2C+col3%2C+col1%2C+col0+from+1--rBL6yF4-RP77sosxC4QUULyZ-DwYcjll49u0YN+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="183" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1AM_Qvd82ke00zR6EJBi-LDTFpXSHQLQXCAiCzJiu+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=183&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+17uOD3zlb3fbcrPHqf2imQTJ5Hq-x1vVMd3Ak6GmH+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col3%2C+col2+from+1Ui_oTEzluzIp7vgaDXqQhHL9UfYs1LMfSfHdSK2Q+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+col0%2C+col3%2C+col1%2C+col2%2C+col4%2C+col5+from+1s3_qu_ZNSlv1_PvifMFyl_s9lrVp49KkDWV6_CLm+order+by+col6+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%221%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%2C+%222%22%3A%7B%22color%22%3A%22%23dc3912%22%7D%2C+%225%22%3A%7B%22color%22%3A%22%23434343%22%7D%7D&amp;width=185&amp;height=350"></iframe>';
+    var bnd1;
+    function quickSelect() {
+        bnd1 = document.form.jenis.value;
+        var text="";
+        if (bnd1=="naungan"){
+            for(y=0; y<5; y++){
+                if(y==4){
+                    text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj1.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="#!/tk_lulusan">'+obj1.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+                }else{
+                    text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj1.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+                }
+            }	
+            graph='<iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col2%2C+col3%2C+col1%2C+col0+from+1--rBL6yF4-RP77sosxC4QUULyZ-DwYcjll49u0YN+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="183" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1AM_Qvd82ke00zR6EJBi-LDTFpXSHQLQXCAiCzJiu+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=183&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+17uOD3zlb3fbcrPHqf2imQTJ5Hq-x1vVMd3Ak6GmH+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col3%2C+col2+from+1Ui_oTEzluzIp7vgaDXqQhHL9UfYs1LMfSfHdSK2Q+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+col0%2C+col3%2C+col1%2C+col2%2C+col4%2C+col5+from+1s3_qu_ZNSlv1_PvifMFyl_s9lrVp49KkDWV6_CLm+order+by+col6+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%221%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%2C+%222%22%3A%7B%22color%22%3A%22%23dc3912%22%7D%2C+%225%22%3A%7B%22color%22%3A%22%23434343%22%7D%7D&amp;width=185&amp;height=350"></iframe>'; 	
+        }else if(bnd1=="dinas"){
+            for(y=0; y<5; y++){
+                if(y==4){
+                    text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj2.data[y].link+'"><div class="'+obj2.data[y].icon+'"></div><div class="big desc">'+obj2.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj2.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj2.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj2.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj2.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="#!/tk_lulusan">'+obj2.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="#!/tk_guru">'+obj2.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+                }else{
+                    text +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj2.data[y].link+'"><div class="'+obj2.data[y].icon+'"></div><div class="big desc">'+obj2.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj2.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj2.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj2.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj2.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+                }	
+            }
+            graph='<iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1ZYJF1vTt9Sd9WvjBSJ4plXdenKlwvyAXY-7UQZzW+order+by+col0+asc+limit+1&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1KdPS_gqEBMWXNQvSBamELX46vknXRrDvObzhBVX9+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+18mnBFR0ltzP9SRk5t0K_62Vm3D3wzZ3odn0MeK4Q+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1IKbogTGGyC8Vk788_WwEjNstjk6_LeDG5vbUsFdb+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3%2C+col5%2C+col6+from+1qdhOqxsl_ttwXs_1Fj1C4GXQ87QJEg4oAgT8cAvz+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%2C+%225%22%3A%7B%22color%22%3A%22%23434343%22%7D%7D&amp;width=185&amp;height=350"></iframe>';	
+                                            
+        }else{
+            for(y=0; y<5; y++){
+                if(y==4){
+                    text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj3.data[y].link+'"><div class="'+obj3.data[y].icon+'"></div><div class="big desc">'+obj3.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj3.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj3.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj3.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj3.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="#!/tk_lulusan">'+obj3.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="#!/tk_guru">'+obj3.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+                }else{
+                    text +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj3.data[y].link+'"><div class="'+obj3.data[y].icon+'"></div><div class="big desc">'+obj3.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="#!/tk">'+obj3.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="#!/tk_siswa">'+obj3.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="#!/tk_guru">'+obj3.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="#!/tk_sarpras">'+obj3.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+                }	
+            }
+            graph='<iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+17ILS5e7upceFTzKOyGTQBLTofamniNWe9O--tJKd+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col1%2C+col0%2C+col2%2C+col3+from+11m61sXs_gB6GGAywigwucbObW4v1PWg7WNBEGrA6+order+by+col1+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1k8dwrYHH7tDG_SFPlwPTbI4U7OD8qpR047HNQtKk+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3+from+1KhxNHOhAiqHKGmkMXp08CLr6PhIil6YUO_MDTNtK+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%7D&amp;width=185&amp;height=350"></iframe><iframe width="185" height="350" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col4%2C+col0%2C+col1%2C+col2%2C+col3%2C+col5%2C+col6+from+1HDaov9yHygSsIpYqexsCKDSTQfBcgJ6z_TYqunC9+order+by+col4+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3Anull%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=right&amp;gco_series=%7B%222%22%3A%7B%22color%22%3A%22%23109618%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23ff9900%22%7D%2C+%225%22%3A%7B%22color%22%3A%22%23434343%22%7D%7D&amp;width=185&amp;height=350"></iframe>';	
+                                            
+        }
+        document.getElementById("rekap").innerHTML =text;
+        document.getElementById("graph").innerHTML =graph;
+    }
+		
+
+</script>
+
+

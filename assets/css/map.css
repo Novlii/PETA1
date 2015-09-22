@@ -1,0 +1,379 @@
+/* map prop koordinat
+
+Sumatera
+57,67,0,0,0,16,'Aceh',20,24
+58,87,57,0,34,41,'Sumatera Utara',62,67
+66,64,115,0,85,72,'Riau',110,98
+92,94,181,0,148,35,'Kepulauan Riau',184,80
+55,73,0,67,60,102,'Sumatera Barat',88,116
+46,56,55,87,102,156,'Bengkulu',119,166
+57,37,101,96,106,129,'Jambi',126,131
+71,58,202,94,119,145,'Sumatera Selatan',149,161
+41,37,158,96,146,183,'Lampung',162,188
+67,32,115,64,172,142,'Kepulauan Bangka Belitung',200,142
+
+Jawa
+28,20,317,135,173,128,'Banten',177,215
+8,9,101,87,197,220,'DKI Jakarta',194,207
+43,34,0,172,193,218,'Jawa Barat',208,224
+55,32,0,140,230,227,'Jawa Tengah',239,228
+14,12,332,80,256,247,'DI Yogyakarta',256,238
+79,54,96,143,272,215,'Jawa Timur',286,233
+
+22,15,180,137,332,255,'Bali',338,247
+59,19,'right','bottom',355,256,'Nusa Tenggara Barat',374,252
+108,51,'right',205,408,256,'Nusa Tenggara Timur',449,252
+
+Kalimantan
+92,89,'right',116,236,81,'Kalimantan Barat',266,106
+87,74,110,205,269,105,'Kalimantan Tengah',307,138
+41,51,55,143,328,139,'Kalimantan Selatan',343,155
+90,116,'right',0,321,42,'Kalimantan Timur',357,83
+
+Sulawesi
+21,47,176,155,405,132,'Sulawesi Barat',406,146
+42,80,197,155,415,149,'Sulawesi Selatan',418,176
+56,55,273,80,441,166,'Sulawesi Tenggara',450,172
+74,80,274,0,419,94,'Sulawesi Tengah',431,130
+43,14,273,138,444.99,'Gorontalo',462,89
+67,74,'right',256,479,39,'Sulawesi Utara',510,66
+
+Maluku
+91,89,239,155,500,72,'Maluku Utara',539,109
+161,97,201,'bottom',521,165,'Maluku',576,203
+
+Papua
+91,74,110,'bottom',593,117,'Papua Barat',638,120
+110,147,0,'bottom',677,128,'Papua',729,177
+
+*/
+/* Map @ portal sekolah */
+.map-prop-cont{
+	padding:0 20px 0 15px;
+	background:#f3f3f3 url(../img/gmap/indo_map.png) no-repeat 15px 0;
+	height:318px;
+}
+.map-prop{
+	position:relative;
+	height:100%;
+}
+.map-prop >h2{
+	padding-top:20px;
+	margin:0;
+	float:right;
+}
+.map-prop >i,
+.map-prop >span{
+	position:absolute;
+	z-index:2;
+}
+.map-prop >i{
+	background:url(../img/gmap/indo_map-hi.png) no-repeat;
+	z-index:1;
+	display:none;
+}
+.map-prop >span:hover+i,
+.map-prop >span.on+i{
+	display:block;
+}
+.map-prop >span:after{
+	content:url(../img/skin/blank.png);
+	background:url(../img/skin/menu-point.png) no-repeat;
+	width:15px;
+	height:8px;
+	position:absolute;
+	right:0;
+	display:none;
+}
+.map-prop >span:before{
+	content:url(../img/skin/blank.png);
+	position:absolute;
+	left:0;
+	top:20px;
+	width:8px;
+	height:20px;
+	border-right:#ff5500 solid 1px;
+	display:none;
+}
+.map-prop >span.on:after,
+.map-prop >span.on:before{
+	display:block;
+}
+.map-prop >span >.ic{
+	background-image:url(../img/ic/ic16-loc2-d.png) !important;
+}
+.map-prop >span.on >.ic,
+.map-prop >span >.ic:hover{
+	background-image:url(../img/ic/ic16-loc2.png) !important;
+}
+/* marker */
+.map-prop .m0{ left:20px;top:24px }
+.map-prop .m0:before{ height:263px }
+.map-prop .m0:after{ top:287px }
+.map-prop .m0+i{ left:0;top:16px;width:57px;height:67px;background-position:0 0 }
+.map-prop .m1{ left:62px;top:67px }
+.map-prop .m1:before{ height:220px }
+.map-prop .m1:after{ top:244px }
+.map-prop .m1+i{ left:34px;top:41px;width:58px;height:87px;background-position:-57px 0 }
+.map-prop .m2{ left:110px;top:98px }
+.map-prop .m2:before{ height:189px }
+.map-prop .m2:after{ top:213px }
+.map-prop .m2+i{ left:85px;top:72px;width:66px;height:64px;background-position:-115px 0 }
+.map-prop .m3{ left:184px;top:80px }
+.map-prop .m3:before{ height:207px }
+.map-prop .m3:after{ top:231px }
+.map-prop .m3+i{ left:148px;top:35px;width:92px;height:94px;background-position:-181px 0 }
+.map-prop .m4{ left:88px;top:116px }
+.map-prop .m4:before{ height:171px }
+.map-prop .m4:after{ top:195px }
+.map-prop .m4+i{ left:60px;top:102px;width:55px;height:73px;background-position:0 -67px }
+.map-prop .m5{ left:119px;top:166px }
+.map-prop .m5:before{ height:121px }
+.map-prop .m5:after{ top:145px }
+.map-prop .m5+i{ left:102px;top:156px;width:46px;height:56px;background-position:-55px -87px }
+.map-prop .m6{ left:126px;top:131px }
+.map-prop .m6:before{ height:156px }
+.map-prop .m6:after{ top:180px }
+.map-prop .m6+i{ left:106px;top:129px;width:57px;height:37px;background-position:-101px -96px }
+.map-prop .m7{ left:149px;top:161px }
+.map-prop .m7:before{ height:126px }
+.map-prop .m7:after{ top:150px }
+.map-prop .m7+i{ left:119px;top:145px;width:71px;height:58px;background-position:-202px -94px }
+.map-prop .m8{ left:162px;top:188px }
+.map-prop .m8:before{ height:99px }
+.map-prop .m8:after{ top:123px }
+.map-prop .m8+i{ left:146px;top:183px;width:41px;height:37px;background-position:-158px -96px }
+.map-prop .m9{ left:200px;top:142px }
+.map-prop .m9:before{ height:145px }
+.map-prop .m9:after{ top:169px }
+.map-prop .m9+i{ left:172px;top:142px;width:67px;height:32px;background-position:-115px -64px }
+.map-prop .m10{ left:177px;top:215px }
+.map-prop .m10:before{ height:72px }
+.map-prop .m10:after{ top:96px }
+.map-prop .m10+i{ left:173px;top:218px;width:28px;height:20px;background-position:-317px -135px }
+.map-prop .m11{ left:194px;top:207px }
+.map-prop .m11:before{ height:80px }
+.map-prop .m11:after{ top:104px }
+.map-prop .m11+i{ left:197px;top:220px;width:8px;height:9px;background-position:-101px -87px }
+.map-prop .m12{ left:208px;top:224px }
+.map-prop .m12:before{ height:63px }
+.map-prop .m12:after{ top:87px }
+.map-prop .m12+i{ left:193px;top:218px;width:43px;height:34px;background-position:0 -172px }
+.map-prop .m13{ left:239px;top:228px }
+.map-prop .m13:before{ height:59px }
+.map-prop .m13:after{ top:83px }
+.map-prop .m13+i{ left:230px;top:227px;width:55px;height:32px;background-position:0 -140px }
+.map-prop .m14{ left:256px;top:238px }
+.map-prop .m14:before{ height:49px }
+.map-prop .m14:after{ top:73px }
+.map-prop .m14+i{ left:256px;top:247px;width:14px;height:12px;background-position:-332px -80px }
+.map-prop .m15{ left:286px;top:233px }
+.map-prop .m15:before{ height:54px }
+.map-prop .m15:after{ top:78px }
+.map-prop .m15+i{ left:272px;top:215px;width:79px;height:54px;background-position:-96px -143px }
+.map-prop .m16{ left:338px;top:247px }
+.map-prop .m16:before{ height:40px }
+.map-prop .m16:after{ top:64px }
+.map-prop .m16+i{ left:332px;top:255px;width:22px;height:15px;background-position:-180px -137px }
+.map-prop .m17{ left:374px;top:252px }
+.map-prop .m17:before{ height:35px }
+.map-prop .m17:after{ top:59px }
+.map-prop .m17+i{ left:355px;top:256px;width:59px;height:19px;background-position:right bottom }
+.map-prop .m18{ left:449px;top:252px }
+.map-prop .m18:before{ height:35px }
+.map-prop .m18:after{ top:59px }
+.map-prop .m18+i{ left:408px;top:256px;width:108px;height:51px;background-position:right -205px }
+.map-prop .m19{ left:266px;top:106px }
+.map-prop .m19:before{ height:181px }
+.map-prop .m19:after{ top:205px }
+.map-prop .m19+i{ left:236px;top:81px;width:92px;height:89px;background-position:right -116px }
+.map-prop .m20{ left:307px;top:138px }
+.map-prop .m20:before{ height:149px }
+.map-prop .m20:after{ top:173px }
+.map-prop .m20+i{ left:269px;top:105px;width:87px;height:74px;background-position:-110px -205px }
+.map-prop .m21{ left:343px;top:155px }
+.map-prop .m21:before{ height:132px }
+.map-prop .m21:after{ top:156px }
+.map-prop .m21+i{ left:328px;top:139px;width:41px;height:51px;background-position:-55px -143px }
+.map-prop .m22{ left:357px;top:83px }
+.map-prop .m22:before{ height:204px }
+.map-prop .m22:after{ top:228px }
+.map-prop .m22+i{ left:321px;top:42px;width:90px;height:116px;background-position:right 0 }
+.map-prop .m23{ left:406px;top:146px }
+.map-prop .m23:before{ height:141px }
+.map-prop .m23:after{ top:165px }
+.map-prop .m23+i{ left:405px;top:132px;width:21px;height:47px;background-position:-176px -155px }
+.map-prop .m24{ left:418px;top:176px }
+.map-prop .m24:before{ height:111px }
+.map-prop .m24:after{ top:135px }
+.map-prop .m24+i{ left:415px;top:149px;width:42px;height:80px;background-position:-197px -155px }
+.map-prop .m25{ left:450px;top:172px }
+.map-prop .m25:before{ height:115px }
+.map-prop .m25:after{ top:139px }
+.map-prop .m25+i{ left:441px;top:166px;width:56px;height:55px;background-position:-273px -80px }
+.map-prop .m26{ left:431px;top:130px }
+.map-prop .m26:before{ height:157px }
+.map-prop .m26:after{ top:181px }
+.map-prop .m26+i{ left:419px;top:94px;width:74px;height:80px;background-position:-274px 0 }
+.map-prop .m27{ left:462px;top:89px }
+.map-prop .m27:before{ height:198px }
+.map-prop .m27:after{ top:222px }
+.map-prop .m27+i{ left:444px;top:99px;width:43px;height:14px;background-position:-273px -138px }
+.map-prop .m28{ left:510px;top:66px }
+.map-prop .m28:before{ height:221px }
+.map-prop .m28:after{ top:245px }
+.map-prop .m28+i{ left:479px;top:39px;width:67px;height:74px;background-position:right -256px }
+.map-prop .m29{ left:539px;top:109px }
+.map-prop .m29:before{ height:178px }
+.map-prop .m29:after{ top:202px }
+.map-prop .m29+i{ left:500px;top:72px;width:91px;height:89px;background-position:-239px -155px }
+.map-prop .m30{ left:576px;top:203px }
+.map-prop .m30:before{ height:84px }
+.map-prop .m30:after{ top:108px }
+.map-prop .m30+i{ left:521px;top:165px;width:161px;height:97px;background-position:-201px bottom }
+.map-prop .m31{ left:638px;top:120px }
+.map-prop .m31:before{ height:167px }
+.map-prop .m31:after{ top:191px }
+.map-prop .m31+i{ left:593px;top:117px;width:91px;height:74px;background-position:-110px bottom }
+.map-prop .m32{ left:729px;top:177px }
+.map-prop .m32:before{ height:110px }
+.map-prop .m32:after{ top:134px }
+.map-prop .m32+i{ left:677px;top:128px;width:110px;height:147px;background-position:0 bottom }
+/* gmap box */
+.gmap{
+	display:table;
+	width:100%;
+}
+.gmap >div{
+	display:table-cell;
+	vertical-align:top;
+}
+.gmap >.map-area{
+	border:#ddd solid 1px;
+	min-height:530px;
+}
+.gmap >.map-area >div{
+	width:100%;
+	height:100%;
+	min-height:530px;
+}
+.gmap >.left-area{
+	width:180px;
+	padding-left:15px;
+}
+.gmap >.map-area[style~="display:"]+.left-area{
+	padding-left:0 !important;
+}
+/* gmap box single school */
+.gmap.single-map >.map-area >div,
+.gmap.single-map >.map-area{
+	min-height:300px;
+}
+.single-map-box{
+	background-color:#f0f0f0;
+}
+.single-map-box >.trio2{
+	margin:0;
+}
+.single-map-box >.trio{
+	width:34% !important;
+}
+/* iklan box */
+.head-iklan{
+	position:absolute;
+	bottom:26px;
+	right:0;
+	border:#cee8ff solid 4px;
+	width:145px;
+	z-index:10;
+	padding-bottom:60px;
+}
+.map-sekolah .head-iklan:before{
+	content:url(../img/skin/masc-sekolah.png);
+	width:97px;
+}
+.map-dinas .head-iklan:before{
+	content:url(../img/skin/masc-dinas.png);
+	width:61px;
+}
+.head-iklan:before{
+	position:absolute;
+	height:87px;
+	bottom:-36px;
+	right:3px;
+}
+/* map card */
+.mapcard{
+	border:1px solid #bbb;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.3); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.3); -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.3);
+	border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+	background:#fff no-repeat center center;
+	width:256px;
+	font-size:11px;
+}
+.mapcard.tk{
+	border-color:#04bb0e;
+}
+.mapcard.sd{
+	border-color:#91290b;
+}
+.mapcard.smp{
+	border-color:#2664be;
+}
+.mapcard.sma{
+	border-color:#7f8895;
+}
+.mapcard.pt{
+	border-color:#4c4c4c;
+}
+.mapcard.dinas{
+	border-color:#ed6400;
+}
+.mapcard.umum,
+.mapcard.siswa,
+.mapcard.guru,
+.mapcard.ortu{
+	border-color:#ff5500;
+}
+.mapcard .profil{
+	position:relative;
+	margin:10px;
+	min-height:50px;
+	width:216px;
+}
+.mapcard .profil .msg{
+	margin:0 0 0 60px;
+}
+.mapcard .profil > img{
+	position:absolute;
+	width:50px;
+	height:50px;
+}
+.mapcard .menu{
+	padding:0 10px 10px 10px;
+}
+.mapcard .menu >ul{
+	display:block;
+}
+.mapcard .menu h4{
+	font-weight:normal;
+	font-style:italic;
+}
+.mapcard .menu a{
+	white-space:normal !important;
+}
+.mapcard p{
+	margin-bottom:7px;
+	color:#666;
+}
+.mapcard .stats{
+	background:#EAEAEC;
+	padding:5px 10px;
+	border-top:1px solid #CBCBC6 !important;
+}
+.mapcard .stats >*{
+	margin-right:5px;
+}
+.mapcard .stats >*:last-child{
+	margin-right:0;
+}

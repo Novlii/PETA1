@@ -1,0 +1,308 @@
+<div id="js-pagediv-kota">
+   <div class="workspc">
+      <div style="background: #f3f3f3; padding-top: 0;" class="workspc-l">
+         <div class="box-cont">
+            <h3 class="desc half fl al">Perubahan data bersifat Real Time Online oleh para Admin Sekolah</h3>
+            <h1 class="desc half fr ar">Pemetaan Mutu Pendidikan Indonesia</h1>
+         </div>
+		 <iframe width="1000" height="450" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col3+from+14k2eWAQYFErCL7F_BEVywBcdFOEYK2ga7pvv11FV+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=-7.962450824608628&amp;lng=112.6380132498048&amp;t=1&amp;z=13&amp;l=col3&amp;y=3&amp;tmplt=5&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=0.01&amp;hmr=1&amp;hmw=0&amp;hml=ONE_COL_LAT_LNG"></iframe>
+         <div class="page-crumb js-crumb" id="c-data">
+               <a class="ic  lbl">Pemetaan Mutu Pendidikan Indonesia</a>
+               <a class="ic ic-p-r lbl" href="/PETA">Jawa Timur</a>
+               <a class="ic ic-p-r lbl" href="/PETA/#!/kota">Kota Malang</a>
+            </div>
+<div class="box-cont">
+               <table class="page-title full">
+                  <tbody><tr>
+                     <td class="med-card menu-jenjang">
+                        <a href="javascript:" class="namecard on">
+                           <img src="http://s.sim.siap-online.com/upload/dinas/205031.png">
+                           <h2>Kota Malang</h2>
+                           <em class="desc">Dinas Pendidikan</em>
+                        </a>
+                     </td>
+                                          <td class="vt">
+                        <form class="fr">
+                           <div style="margin:0 10px" onclick="window.location='http://malang.siap-ppdb.com'" class="button">
+                              <b class="med">&nbsp;<br>Portal PPDB<br>&nbsp;</b>
+                           </div>
+                           <!--                           <div class="button js-aktivasi-btn" style="margin:0 10px">-->
+                           <!--                              <b class="med">&nbsp;<br>Aktifkan Sekolah Anda<br>&nbsp;</b>-->
+                           <!--                           </div>-->
+                        </form>
+                     </td>
+                                            <td class="fr menu-jenjang js-menu-btn" style="display: none">
+                                                     <a class="icj icj-tk" href="#!/kota_tk"><b>TK/PAUD</b></a>
+                                                   <a class="icj icj-sd" href="#!/kota_sd"><b>SD/MI</b></a>
+                                                   <a class="icj icj-smp" href="#!/kota_smp"><b>SMP/MTs</b></a>
+                                                   <a class="icj icj-sma" href="#!/kota_sma"><b>SMA/MA</b></a>
+                                                   <a class="icj icj-smk" href="#!/kota_smk"><b>SMK/MAK</b></a>
+                                             </td>
+                  </tr>
+               </tbody></table>
+               <!-- home -->
+               <div style="background:#FFF" class="js-pagediv box-cont" id="js-pagediv-index">
+               	<div class="freearea clear" style="margin-bottom:15px">
+                     <div class="nav fl">
+									<span><span class="big">Rekapitulasi Data Pendidikan <span class="sml">di</span> Kota Malang</span></span>
+								</div>
+                       <form class="nav fr" name="form" onClick="quickSelect()">
+							 
+							<select NAME="jenis" SIZE=1 style="width:147px">
+								<option VALUE="naungan">Seluruh Naungan</option>
+								<option VALUE="dinas">Naungan Kemdikbud</option>
+								<option VALUE="depag">Naungan Kemenag</option>
+							</SELECT>							
+                        </form>
+                     
+                  </div>
+                  <div class="section menu-beranda clear js-jenjang-rekap" id="demo">                                      
+                                   
+			   </div>
+			   <script>
+var dt1='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/kota_tk","sekolah":20,"siswa":31,"guru":104,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/kota_sd","sekolah":20,"siswa":2188,"guru":304,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/kota_smp","sekolah":20,"siswa":4961,"guru":594,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/kota_sma","sekolah":20,"siswa":5768,"guru":736,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/kota_smk","sekolah":20,"siswa":9066,"guru":1056,"sarpras":31,"lulusan":"0","kompetensi":"0"}]}';
+var dt2='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/kota_tk","sekolah":20,"siswa":110,"guru":73,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/kota_sd","sekolah":20,"siswa":2083,"guru":301,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/kota_smp","sekolah":20,"siswa":5300,"guru":605,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/kota_sma","sekolah":20,"siswa":3010,"guru":755,"sarpras":0,"lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/kota_smk","sekolah":20,"siswa":9066,"guru":1056,"sarpras":31,"lulusan":"0","kompetensi":"0"}]}';
+var dt3='{"data":[{"icon":"icj icj-tk","nama":"TK/PAUD","link":"#!/kota_tk","sekolah":14,"siswa":0,"guru":85,"sarpras":"0","lulusan":"","kompetensi":""},{"icon":"icj icj-sd","nama":"SD/MI","link":"#!/kota_sd","sekolah":11,"siswa":1368,"guru":165,"sarpras":"0","lulusan":"","kompetensi":""},{"icon":"icj icj-smp","nama":"SMP/MTs","link":"#!/kota_smp","sekolah":12,"siswa":915,"guru":186,"sarpras":"0","lulusan":"","kompetensi":""},{"icon":"icj icj-sma","nama":"SMA/MA","link":"#!/kota_sma","sekolah":13,"siswa":245,"guru":550,"sarpras":"0","lulusan":"","kompetensi":""},{"icon":"icj icj-smk","nama":"SMK/MAK","link":"#!/kota_smk","sekolah":0,"siswa":0,"guru":0,"sarpras":"0","lulusan":"0","kompetensi":"0"}]}';
+obj1 = JSON.parse(dt1);
+obj2 = JSON.parse(dt2); 
+obj3 = JSON.parse(dt3);   
+var y;
+var a="";
+	for(y=0; y<5; y++){
+		if(y==4){
+			a+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj1.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="/#!/tk/lulusan">'+obj1.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+		}else{
+			a +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj1.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+		}
+	}						
+    document.getElementById("demo").innerHTML = a;	
+	var bnd1;
+function quickSelect() {
+	bnd1 = document.form.jenis.value;
+		var text="";
+		if (bnd1=="naungan"){
+			for(y=0; y<5; y++){
+				if(y==4){
+					text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj1.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="/#!/tk/lulusan">'+obj1.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+				}else{
+					text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj1.data[y].link+'"><div class="'+obj1.data[y].icon+'"></div><div class="big desc">'+obj1.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj1.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj1.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj1.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj1.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+				}
+			}	
+		}else if(bnd1=="dinas"){
+			for(y=0; y<5; y++){
+			if(y==4){
+				text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj2.data[y].link+'"><div class="'+obj2.data[y].icon+'"></div><div class="big desc">'+obj2.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj2.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj2.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj2.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj2.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="/#!/tk/lulusan">'+obj2.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="/#!/tk/guru">'+obj2.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+			}else{
+				text +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj2.data[y].link+'"><div class="'+obj2.data[y].icon+'"></div><div class="big desc">'+obj2.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj2.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj2.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj2.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj2.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+			}	
+			}
+		}else{
+			for(y=0; y<5; y++){
+				if(y==4){
+					text+='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj3.data[y].link+'"><div class="'+obj3.data[y].icon+'"></div><div class="big desc">'+obj3.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj3.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj3.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj3.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj3.data[y].sarpras+'</a></td></tr><tr><td>Lulusan</td><td class="ar"><a href="/#!/tk/lulusan">'+obj3.data[y].lulusan+'</a></td></tr><tr><td>Kompetensi Keahlian</td><td class="ar"><a href="/#!/tk/guru">'+obj3.data[y].kompetensi+'</a></td></tr></tbody></table></div></div></div>';
+				}else{
+					text +='<div class="fl"><div class="box sdw rnd6 section" ><a class="blk freearea rnd6 rnd-t ac" href="'+obj3.data[y].link+'"><div class="'+obj3.data[y].icon+'"></div><div class="big desc">'+obj3.data[y].nama+'</div></a><div class="box-cont"><div class="desc hr clear"><p class="fl">Ringkasan Data:</p></div><table class="tbl-data full"><tbody><tr><td>Sekolah</td><td class="ar"><a href="/#!/tk/sekolah">'+obj3.data[y].sekolah+'</a></td></tr><tr><td>Siswa</td><td class="ar"><a href="/#!/tk/siswa">'+obj3.data[y].siswa+'</a></td></tr><tr><td>Guru</td><td class="ar"><a href="/#!/tk/guru">'+obj3.data[y].guru+'</a></td></tr><tr><td>Sarpras</td><td class="ar"><a href="/#!/tk/sarpras">'+obj3.data[y].sarpras+'</a></td></tr></tbody></table></div></div></div>';
+				}	
+			}
+		}
+			document.getElementById("demo").innerHTML =text;
+     }
+		
+
+</script>
+               <!-- rekap -->
+               <div style="background:#FFF; display: none" class="js-pagediv" id="js-pagediv-detil">
+                  <div class="freearea clear">
+                     <form class="fr">
+                        <div class="nav" style="height: 17px;">
+                           <a title="cetak halaman" class="print tips-r hide"></a>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="app-menu2 app-head-menu clear js-app-menu"></div>
+                  <div class="box-cont" style="padding: 10px 12px 0px 12px">
+                     <form class="nav-cont rnd3 clear" style="margin-bottom:0px">
+                        <div class="nav">
+                           <span><b class="med js-total">200</b> Sekolah</span>
+                        </div>
+                        <div class="nav fr">
+                           <a class="paging tips-m js-status-option js-select" rel="1"><span class="js-value">Negeri</span></a><div class="tips-modal menu rnd3 js-options"><div class="point"></div><ul><li><a href="javascript:" rel="0">Swasta</a></li><li class="on"><a href="javascript:" rel="1">Negeri</a></li></ul></div>
+                           <a class="paging filter tips js-filter js-select" href="javascript:" title="Filter data" rel=""><span class="js-value">Seluruh Naungan</span></a><div class="tips-modal menu rnd3 js-options"><div class="point"></div><ul><li class="on"><a href="javascript:" rel="">Seluruh Naungan</a></li><li><a href="javascript:" rel="dinas">Naungan Kemdikbud</a></li><li><a href="javascript:" rel="depag">Naungan Kemenag</a></li></ul></div>
+                           <a title="memuat ulang" class="reload tips js-reload" href="javascript:"></a>
+                        </div>
+                        <div class="fr nav-group">
+                           <div class="nav">
+                              <input type="text" value="" id="f2" class="js-search-keyword">
+                              <a class="cari js-search-btn"></a>
+                           </div>
+                        </div>
+                     </form>
+                     <div style="display: none;" class="js-search-info">
+                        <div class="freearea clear">
+                           <div style="width: 80% !important;" class="ic ic-cari lbl nav">
+                              <span>Hasil pencarian kata</span>
+                              <span class="trio2"><b class="med ellipsis js-search-label"></b></span>
+                           </div>
+                           <a href="javascript:" class="ic act-cls fr js-search-close"></a>
+                        </div>
+                        <div style="width: 200px;" class="pointed-t section"></div>
+                     </div>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-sekolah">
+                     <!-- data kelulusan kota -->
+                     <table class="tbl-data full js-rekap-sekolah">
+                        <caption>Data Sekolah <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="10">No</th>
+                              <th>Sekolah</th>
+                              <th>Alamat</th>
+                              <th>Status</th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card"></tbody>
+                     </table>
+                  </div>
+                  <div style="background:#FFF; display: none;" class="box-cont js-child-div" id="js-pagediv-detil-siswa">
+                     <!-- data kelulusan kota -->
+                     <table class="tbl-data full js-rekap-siswa">
+                        <caption>Data Siswa <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="10" rowspan="2">No</th>
+                              <th rowspan="2">Sekolah</th>
+                              <th rowspan="2">Status</th>
+                              <th class="ac" colspan="2">Jumlah Siswa</th>
+                           </tr>
+                           <tr class="ar">
+                              <th><i class="ics ic-male tips" title="Laki-laki"></i></th>
+                              <th><i class="ics ic-female tips" title="Perempuan"></i></th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar"></tbody>
+                        <tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Siswa <span class="js-jenjang"></span>:</td>
+                              <td class="med"><span class="js-siswa-total-l">0</span></td>
+                              <td class="med"><span class="js-siswa-total-p">0</span></td>
+                           </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-guru">
+                     <!-- data kelulusan Kota -->
+                     <table class="tbl-data full js-rekap-guru">
+                        <caption>Data Guru <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="10">No</th>
+                              <th>Sekolah</th>
+                              <th>Status</th>
+                              <th>Jumlah Guru</th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar"></tbody>
+                        <tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Guru <span class="js-jenjang"></span>:</td>
+                              <td class="med"><span class="js-guru-total">0</span></td>
+                           </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-sarpras">
+                     <!-- data kelulusan prov -->
+                     <table class="tbl-data full js-rekap-sarpras">
+                        <caption>Data Sarpras <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="4%" rowspan="2">No</th>
+                              <th width="35%" rowspan="2">Sekolah</th>
+                              <th width="15%" rowspan="2">Status</th>
+                              <th colspan="3" class="ac">Jumlah Sarpras</th>
+                           </tr>
+                           <tr class="ar">
+                              <th>Prasarana</th>
+                              <th>Sarana</th>
+                              <th>Total</th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar"></tbody>
+                        <tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Sarpras <span class="js-jenjang"></span>:</td>
+                              <td class="med"><span title="Prasarana" class="tips js-sarpras-prasarana">0</span></td>
+                              <td class="med"><span title="Sarana" class="tips js-sarpras-sarana">0</span></td>
+                              <td class="med"><span class="js-sarpras-total">0</span></td>
+                            </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-lulusan">
+                     <!-- data kelulusan prov -->
+                     <table class="tbl-data full js-rekap-lulusan">
+                        <caption>Data Kelulusan <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="4%" rowspan="2">No</th>
+                              <th width="35%" rowspan="2">Sekolah</th>
+                              <th width="15%" rowspan="2">Status</th>
+                              <th colspan="3" class="ac">Status kelulusan</th>
+                              <th width="10%" class="ar" rowspan="2">Jumlah Lulusan (2012)</th>
+                           </tr>
+                           <tr class="ar">
+                              <th><span title="Bekerja sebagai pegawai di dunia usaha" class="tips">Pegawai</span></th>
+                              <th><span title="Membuka usaha secara mandiri" class="tips">Wiraswasta</span></th>
+                              <th><span title="Melanjutkan sekolah ke Perguruan Tinggi" class="tips">Lanjut Kuliah</span></th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar"></tbody>
+                        <tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Lulusan <span class="js-jenjang"></span> (Tahun Lalu):</td>
+                              <td class="med"><span title="Total Siswa yang bekerja sebagai pegawai di dunia usaha" class="tips js-lulusan-pegawai">0</span></td>
+                              <td class="med"><span title="Total Siswa yang berwiraswasta" class="tips js-lulusan-wiraswasta">0</span></td>
+                              <td class="med"><span title="Total Siswa yang membuka usaha secara mandiri" class="tips js-lulusan-mandiri">0</span></td>
+                              <td class="med"><span title="Total Lulusan" class="tips js-lulusan-total">0</span></td>
+                            </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+                  <div style="background:#FFF" class="box-cont js-child-div" id="js-pagediv-detil-kompetensi">
+                     <!-- data kelulusan prov -->
+                     <table class="tbl-data full js-rekap-kompetensi">
+                        <caption>Data Kompetensi Keahlian <span class="sml">jenjang</span> <span class="js-jenjang"></span> <span class="sml">di</span> Kota / Kab. Kota Malang</caption>
+                        <thead>
+                           <tr class="al">
+                              <th width="10">No</th>
+                              <th>Sekolah</th>
+                              <th>Status</th>
+                              <th>Kompetensi</th>
+                           </tr>
+                        </thead>
+                        <tbody class="sml-card ar"></tbody>
+                        <tfoot>
+                           <tr class="ar">
+                              <td>&nbsp;</td>
+                              <td nowrap="nowrap" colspan="2">Total Kompetensi <span class="js-jenjang"></span>:</td>
+                              <td class="med"><span class="js-kompetensi-total">0</span></td>
+                            </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+                  <div class="box-cont">
+                     <div class="nav-cont rnd5 rnd-b clear js-navigation"><div class="nav-cont rnd5 clear"><div class="fr nav-group"><div class="nav"><a class="prev js-paging-nav" rel="-1"></a><a class="paging js-paging" rel="1"><span class="js-value">Hal 1 dari 1</span></a><div class="tips-modal rnd3 js-options"><div class="point"></div><div class="tips-modal-cont"><div class="nav-pages"><div class="nav-no" style="margin-top: 0px;"><ul><li rel="1" class="on">1</li></ul></div></div><div class="nav-pages-nav" style="display: none;"><a class="act ic-p-u tips-ls" href="javascript:" rel="up"></a><a class="act ic-p-d tips-ls" href="javascript:" rel="down"></a></div></div></div><a class="next js-paging-nav" rel="1"></a></div></div><div class="fr nav clear"><a class="paging js-select js-select-limit" style="display: none;"></a></div></div></div>
+                  </div>
+                  <!-- modal tips -->
+                  <div style="display: none">
+                     
+                  </div>
+               </div>
+            </div>
+      </div>
+   </div>
+</div>
